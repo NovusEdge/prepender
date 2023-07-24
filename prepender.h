@@ -16,7 +16,11 @@ typedef unsigned char byte;
 
 bool is_elf(char*);
 bool is_infected(char*);
+byte* read_file(char*);
+char* xor_enc_dec(const char*);
 unsigned int file_size(char*);
-char* xor_enc_dec(const char* );
+
+void infect_program(const char*, const char*);
+void run_infected_host(const char*, const char*);
 
 #endif
