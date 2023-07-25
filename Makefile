@@ -1,12 +1,9 @@
 CC = gcc
 CFLAGS := -pie -Wall -Os
-TARGET := payload
+TARGET := prepender
 
 all:
 	$(CC) $(CFLAGS) -o $(TARGET) prepender.c
 	
- 
-clean: $(TARGET)
+clean:
 	rm $(TARGET)
-
-		
